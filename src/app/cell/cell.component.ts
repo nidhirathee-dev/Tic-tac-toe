@@ -13,7 +13,7 @@ export class CellComponent implements OnInit {
   }
 
   @Input() value: string;//parent to child
-  @Output('userClick') click = new EventEmitter<string>();
+  @Output('onClick') click = new EventEmitter<string>();//child to parent
 
   @HostListener('click')
   clickHandler() {

@@ -13,7 +13,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     for (let i = 0; i < 9; i++) {
-      console.log('cells',this.cells);
+      // console.log('cells',this.cells);
       this.cells[i] = null;
     }
   }
@@ -70,13 +70,13 @@ export class BoardComponent implements OnInit {
       
       if (this.cells[line[0]] === this.cells[line[1]] && this.cells[line[1]] === this.cells[line[2]] && this.cells[line[0]] !== null) {
         this.gameover = true;
-        this.winner = 'winner is:' + this.cells[line[0]];
+        this.winner = 'winner is : ' + this.cells[line[0]];
         return;
       }
     }
-    let occupy = 0;
-    this.cells.forEach((e) => { occupy += (e !== null ? 1 : 0) });
-    if (occupy === 9) {
+    let notEmpty= 0;
+    this.cells.forEach((e) => { notEmpty += (e !== null ? 1 : 0) });
+    if (notEmpty === 9) {
       console.log('tie');
       this.gameover = true;
       this.winner = "It's a tie!!";

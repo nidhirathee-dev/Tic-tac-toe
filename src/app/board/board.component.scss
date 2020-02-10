@@ -3,28 +3,30 @@
     position: absolute;
     top: 30%;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, -50%) 
 }
 .start-button {
-    margin:0 auto;
     margin-bottom: 10px;
     align-items: center;
 
+}
+.board-base {
+    background-color:white;
 }
 
 .board-base::after {
     content: "";
     clear: both;
     display: table;
-    align-items: center;
+    justify-content: center;
+    // align-items: center;
 
 }
 
 .result {
     margin-bottom:10px;
     color:white;
-    font-size: 5em;
+    font-size: 2em;
 }
 
 // .result p {
