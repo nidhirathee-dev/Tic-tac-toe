@@ -13,7 +13,6 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     for (let i = 0; i < 9; i++) {
-      // console.log('cells',this.cells);
       this.cells[i] = null;
     }
   }

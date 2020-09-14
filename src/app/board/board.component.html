@@ -7,7 +7,6 @@
         </app-cell>
     </div>
     <div class="board-base">
-
         <app-cell *ngFor="let cell of cells | slice: 3: 6; let i = index" [value]="cell" (onClick)=clickHandler(i+3)>
         </app-cell>
 
@@ -18,5 +17,8 @@
     </div>
     <div class="result" *ngIf="winner">
         <p> status: </p> {{winner}} 
+    </div>
+    <div class="info" *ngIf="winner">
+        <p> To restart: click <strong> start game</strong> button</p>
     </div>
 </div>
